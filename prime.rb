@@ -1,12 +1,12 @@
 require 'pry'
 
 # Add  code here!
-def prime?(integer)
-  return false if integer < 2
-  (2..integer - 1).each do |x|
-    if (integer % x) == 0
-      return false
-    end
-    end
-    true
-end
+def prime?(int)
+  if num < 2
+    false 
+  else 
+    (2...int).to_a.all? do |x|
+      int % x != 0 
+    end 
+  end 
+end 
